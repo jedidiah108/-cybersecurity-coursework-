@@ -22,6 +22,10 @@ Implemented four components covering both attack and defence sides of model secu
 - **`adaptive_attack.py`** — JPEG-based transformation to evade watermark/fingerprint detection
 - **`assignment2_CSIT375.ipynb`** — main notebook tying components together, with experiments and analysis
 
+## 📊 Results
+
+Successfully implemented and trained all four components — the backdoored module achieved high attack success on triggered inputs while preserving accuracy on clean inputs (per the stealth loss objective), the trigger reverse-engineering process recovered a compact trigger/mask capable of flipping predictions to the target label, the watermark embedding and decoder achieved strong watermark detection accuracy (true positive rate) with low false positives on clean images, and the JPEG-based adaptive attack demonstrated that simple image transformations can degrade fingerprint/watermark detection while preserving classification behavior. *(Exact metrics available in the original submission notebook.)*
+
 ## 🎯 Relevance to Blue Team / Security
 
 This assignment covers real threats to the ML supply chain: backdoored models (a growing concern for organizations using third-party or fine-tuned models), and the attack/defence dynamic around watermarking and model ownership verification. Understanding how a backdoor can be stealthily embedded and later reverse-engineered, and how watermark defences can be evaded with something as simple as JPEG compression, is directly relevant to evaluating the trustworthiness of AI models deployed in security-sensitive contexts.
