@@ -13,7 +13,7 @@ The target is a remote voucher-generation service listening on an unknown UDP po
 
 ## 🛠️ Environment
 
-- **Target:** Remote Linux host (UDP service on an unknown port in a defined range)
+- **Target:** Remote Linux host running a UDP service on a random port within a known range
 - **Attacker:** Kali Linux
 - **Tools:** Nmap (UDP port scanning), Netcat (service interaction), Crunch (candidate wordlist generation), Hashcat (hash cracking), AWK (candidate list construction)
 
@@ -23,11 +23,14 @@ The target is a remote voucher-generation service listening on an unknown UDP po
 ```bash
 sudo nmap -sU -p 12345-12500 --open -v <target_ip>
 ```
+![Target server startup, listening on a random UDP port](./server-startup.png)
+![Nmap UDP scan discovering the open port](./nmap-udp-scan.png)
 
 **2. Voucher retrieval** — sent the client ID to the discovered port and captured the returned MD5 voucher code:
 ```bash
 echo -n "<client_id>" | nc -u -w1 <target_ip> <port>
 ```
+![Voucher code retrieved from the service via netcat](./voucher-retrieval.png)
 
 **3. Candidate generation** — since `A` (2 lowercase letters) and `B` (2 symbols from a restricted set) had known, bounded character sets, used Crunch to generate every possible combination of each, then combined them with the known client ID into a full candidate list:
 ```bash
@@ -45,6 +48,7 @@ hashcat -m 0 -a 0 voucher_hash.txt candidates.txt
 ```bash
 echo -n "<cracked_plaintext>" | md5sum
 ```
+![Hashcat crack result and manual MD5 verification](./hashcat-crack-verification.png)
 
 ## 📊 Results
 
