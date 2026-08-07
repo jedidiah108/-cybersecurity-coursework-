@@ -6,8 +6,8 @@ Coursework from CSIT302 Cybersecurity, covering defensive security architecture 
 
 | Assignment | Topic |
 |---|---|
-| [Defense-Strategies](./Defense-Strategies) | Zero Trust Architecture, Defense in Depth, and Layered Defense — a healthcare ransomware case study |
-| [Phishing-Awareness](./Phishing-Awareness) | "Don't Take the Bait" — a phishing awareness training deck for general users |
+| [Defense-Strategies.pdf](./Defense-Strategies.pdf) | Zero Trust Architecture, Defense in Depth, and Layered Defense — a healthcare ransomware case study |
+| [Phishing-Awareness.pdf](./Phishing-Awareness.pdf) | "Don't Take the Bait" — a phishing awareness training deck for general users |
 
 ## 🎯 Relevance to Blue Team / Security
 
