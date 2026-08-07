@@ -6,10 +6,10 @@ Assignments from my Ethical Hacking / offensive security coursework at the Unive
 
 | Assignment | Topic | Key Skills |
 |---|---|---|
-| [assignment1](./assignment1) | ARP Spoofing / Man-in-the-Middle | Scapy, ARP cache poisoning, traffic interception |
-| [assignment2](./assignment2) | Reflected XSS — Cookie Exfiltration (DVWA) | Web app exploitation, JavaScript injection, session hijacking |
-| [assignment3](./assignment3) | Ransomware Simulation — Hybrid Encryption | OpenSSL, AES/RSA hybrid encryption, malware behavior patterns |
-| [assignment4](./assignment4) | UDP Service Enumeration & MD5 Hash Cracking | Nmap UDP scanning, Crunch, Hashcat, hash cracking |
+| [Assignment1](./Assignment1) | ARP Spoofing / Man-in-the-Middle | Scapy, ARP cache poisoning, traffic interception |
+| [Assignment2](./Assignment2) | Reflected XSS — Cookie Exfiltration (DVWA) | Web app exploitation, JavaScript injection, session hijacking |
+| [Assignment3](./Assignment3) | Ransomware Simulation — Hybrid Encryption | OpenSSL, AES/RSA hybrid encryption, malware behavior patterns |
+| [Assignment4](./Assignment4) | UDP Service Enumeration & MD5 Hash Cracking | Nmap UDP scanning, Crunch, Hashcat, hash cracking |
 
 ## 🎯 Why This Matters for Blue Team / SOC Work
 
