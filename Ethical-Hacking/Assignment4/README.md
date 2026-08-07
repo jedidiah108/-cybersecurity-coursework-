@@ -32,6 +32,8 @@ echo -n "<client_id>" | nc -u -w1 <target_ip> <port>
 ```
 ![Voucher code retrieved from the service via netcat](./voucher-retrieval.png)
 
+> **Note:** the service returns a freshly generated voucher hash on each request, so the hash captured here differs from the one used in the cracking steps below — both were captured in separate runs of the same process, not a single continuous session.
+
 **3. Candidate generation** — since `A` (2 lowercase letters) and `B` (2 symbols from a restricted set) had known, bounded character sets, used Crunch to generate every possible combination of each, then combined them with the known client ID into a full candidate list:
 ```bash
 crunch 2 2 abcdefghijklmnopqrstuvwxyz -o A.txt
