@@ -9,7 +9,7 @@ Organized by subject/module:
 - **[/AI-and-Cybersecurity](./AI-and-Cybersecurity)** 
 - **[/Ethical-Hacking](./Ethical-Hacking)** 
 - **[/Cybersecurity](./Cybersecurity)**
-- **[/System Security](./System-Security)**
+- **[/System-Security](./System-Security)**
 - **[/Cryptography-and-Secure-Applications](./Cryptography-and-Secure-Applications)**
 
 ## 📌 Note
