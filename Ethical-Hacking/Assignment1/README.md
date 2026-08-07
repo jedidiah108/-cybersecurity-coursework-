@@ -1,4 +1,4 @@
-# ARP Spoofing / Man-in-the-Middle Attack (Network Security Coursework)
+# ARP Spoofing / Man-in-the-Middle Attack 
 
 Coursework assignment implementing a classic ARP spoofing (ARP cache poisoning) attack, demonstrating how an attacker can position themselves as a man-in-the-middle between a victim and a router on a local network.
 
