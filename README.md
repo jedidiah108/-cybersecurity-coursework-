@@ -6,12 +6,11 @@ A collection of assignments and projects from my Bachelor of Computer Science (C
 
 Organized by subject/module:
 
-- **[/network-security](./network-security)** — coming soon
-- **[/cryptography](./cryptography)** — coming soon
-- **[/digital-forensics](./digital-forensics)** — coming soon
-- **[/secure-coding](./secure-coding)** — coming soon
-
-*(Folder names will be updated to match my actual course modules as content is added.)*
+- **[/AI-and-Cybersecurity](./AI-and-Cybersecurity)** 
+- **[/Ethical-Hacking](./Ethical-Hacking)** 
+- **[/Cybersecurity](./Cybersecurity)**
+- **[/System Security](./System-Security)**
+- **[/Cryptography-and-Secure-Applications](./Cryptography-and-Secure-Applications)**
 
 ## 📌 Note
 
