@@ -1,45 +1,23 @@
-# ARP Spoofing / Man-in-the-Middle Attack (Network Security Coursework)
+# Ethical Hacking Coursework
 
-Coursework assignment implementing a classic ARP spoofing (ARP cache poisoning) attack, demonstrating how an attacker can position themselves as a man-in-the-middle between a victim and a router on a local network.
+Assignments from my Ethical Hacking / offensive security coursework at the University of Wollongong. Each assignment covers a hands-on attack technique performed in an isolated lab environment (Kali Linux + vulnerable/lab-provided targets), with a full writeup of the process, evidence, and its relevance to defensive (blue team) security.
 
-## 📋 Overview
+## 📂 Assignments
 
-ARP spoofing works by sending forged ARP reply packets onto a network, associating the attacker's MAC address with the IP address of another host (e.g. the router). This tricks the victim's ARP cache into sending traffic intended for the router to the attacker instead, enabling traffic interception.
+| Assignment | Topic | Key Skills |
+|---|---|---|
+| [assignment1](./assignment1) | ARP Spoofing / Man-in-the-Middle | Scapy, ARP cache poisoning, traffic interception |
+| [assignment2](./assignment2) | Reflected XSS — Cookie Exfiltration (DVWA) | Web app exploitation, JavaScript injection, session hijacking |
+| [assignment3](./assignment3) | Ransomware Simulation — Hybrid Encryption | OpenSSL, AES/RSA hybrid encryption, malware behavior patterns |
+| [assignment4](./assignment4) | UDP Service Enumeration & MD5 Hash Cracking | Nmap UDP scanning, Crunch, Hashcat, hash cracking |
 
-This implementation:
-- Resolves MAC addresses via crafted ARP requests
-- Continuously sends spoofed ARP replies to both the victim (claiming to be the router) and the router (claiming to be the victim), redirecting traffic through the attacker's machine
-- Gracefully restores the original ARP tables on both hosts when interrupted (`Ctrl+C`), avoiding leaving the network in a broken state
+## 🎯 Why This Matters for Blue Team / SOC Work
 
-## 🛠️ Environment
-
-- **Attacker:** Kali Linux
-- **Target:** Metasploitable (victim + router on the same local network)
-- **Tooling:** Python 3, Scapy (for crafting and sending raw ARP packets)
-
-## ▶️ Usage
-
-```bash
-sudo python3 arpspoof.py <Victim_IP> <Router_IP>
-```
-
-Example:
-```bash
-sudo python3 arpspoof.py 10.0.2.4 10.0.2.1
-```
-
-Press `Ctrl+C` to stop the attack and automatically restore the ARP tables on both hosts.
-
-## 📊 Results
-
-Successfully executed the attack against a victim/router pair on an isolated lab network (Metasploitable), confirming continuous spoofed ARP replies were sent to both hosts. Upon interruption, ARP tables were correctly restored to their legitimate state.
-
-![ARP spoofing terminal output](./arpspoof.png)
-
-## 🎯 Relevance to Blue Team / Security
-
-Understanding ARP spoofing from the attacker's side directly informs blue team detection capability — this is exactly the kind of activity a SOC would want to detect via ARP monitoring, gratuitous ARP alerts, or static ARP entries on critical infrastructure. Having built the attack firsthand makes it easier to recognize its signature in packet captures or IDS/IPS alerts (e.g. Suricata/Zeek ARP spoofing detection rules) during investigation.
+Understanding these attacks from the offensive side directly strengthens defensive capability — recognizing what each technique looks like in logs, network traffic, or SIEM alerts, and understanding the underlying weaknesses each attack exploits (missing input sanitization, weak hashing, ARP trust assumptions, unprotected key material) is essential context for detection, incident response, and security architecture review.
 
 ## ⚠️ Disclaimer
 
-This was performed exclusively in an isolated lab environment (Kali + Metasploitable) as part of university coursework, for educational purposes only. ARP spoofing against networks/hosts you do not own or have explicit authorization to test is illegal.
+All assignments were performed exclusively in isolated lab environments (Kali Linux against lab-provided or intentionally vulnerable targets: DVWA, Metasploitable, course-provided lab servers) as part of university coursework. None of these techniques were tested against systems outside of a controlled, authorized lab setting. Performing these techniques against systems you do not own or have explicit authorization to test is illegal.
+
+---
+*For self-directed practice and investigations (TryHackMe, HTB Sherlocks, BTLO, home lab), see my [soc-writeups](https://github.com/jedidiah108/soc-writeups) repo.*
