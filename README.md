@@ -10,6 +10,7 @@ Organized by subject/module:
 - **[/Ethical-Hacking](./Ethical-Hacking)** 
 - **[/Cybersecurity](./Cybersecurity)**
 - **[/System-Security](./System-Security)**
+- **[/Cryptography-and-Secure-Application](./Cryptography-and-Secure-Application)**
 
 ## 📌 Note
 
