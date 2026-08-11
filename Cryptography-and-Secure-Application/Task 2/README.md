@@ -18,9 +18,11 @@ Using the keyword **`STRAWBERRY`**:
 
 **Step 1 — build the key:**
 Unique letters from the keyword (duplicates removed): `S T R A W B E Y`
+
 Remaining alphabet appended Z→A: `Z X V U Q P O N M L K J I H G F D C`
 
 **Resulting key:**
+
 Plain: A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
 
 Key: S T R A W B E Y Z X V U Q P O N M L K J I H G F D C
