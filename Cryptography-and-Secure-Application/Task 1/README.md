@@ -17,6 +17,7 @@ The exact frequency counts (via the `f` command) confirmed `g` as the most frequ
 **Step 2 — Map high-frequency letters to English's expected order:**
 
 Since `g` was by far the most frequent ciphertext letter, it was mapped to English's most common letter, `E`. Subsequent ciphertext letters were mapped against the standard English frequency order:
+
 E T A O I N R S H ← highest frequency
 
 **Step 3 — Refine using word patterns:**
@@ -30,8 +31,11 @@ Applying the initial letter mappings revealed common English function words emer
 Remaining substitutions were determined through contextual and grammatical analysis rather than guesswork — testing candidate mappings against the whole document, keeping ones that improved global readability, and reverting (via Krypto's undo function) any that created contradictions. Example resolved mappings:
 
 orobleks → problems
+
 ahanse → change
+
 soins → going
+
 
 **Step 5 — Final cleanup:**
 
@@ -58,7 +62,9 @@ Ctext-2's frequency graph showed a **flattened distribution** — no single lett
 **Step 2 — Determine key length via Index of Coincidence (IC):**
 
 The Index of Coincidence was computed for assumed key lengths from 2 to 10:
+
 IC = 0.043 (overall, flat — confirms polyalphabetic)
+
 Key length 8 → average IC = 0.064
 
 A key length of 8 produced an IC closest to English's expected value (≈0.066), confirming **8** as the correct key length.
@@ -70,6 +76,7 @@ For each of the 8 key positions, the corresponding letter subsequence was extrac
 ![Letter subsequences for each of the 8 key positions](./ctext2-key-position-subsequences.png)
 
 Using the property that in English letter-frequency rankings, `Z` and `A` sit adjacent (`Z` low, `A` high), each subsequence's graph was compared against the expected `E T A O I N R S H` order and shifted accordingly to identify that position's key letter:
+
 Position 0 → A
 Position 1 → N
 Position 2 → A
